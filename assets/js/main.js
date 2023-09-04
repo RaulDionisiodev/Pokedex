@@ -19,6 +19,9 @@ function loadPokemonItens(offset, limit) {
             <img src=${pokemon.photo} 
                 alt="${pokemon.name}" srcset="">
         </div>
+        <div class="pagination">
+            <button type="button" id="seeDetail" onclick="redirectToDetail(${pokemon.number})">See Details</button>
+        </div>
         </li>
     `).join("")
         pokemonList.innerHTML += newHtml;
@@ -43,3 +46,9 @@ loadMoreButton.addEventListener("click", () => {
     }
 
 })
+
+function redirectToDetail(idPokemon) {
+    localStorage.setItem("idPokemon", idPokemon)
+    window.location.href = "pokemonDetail.html"
+
+}
