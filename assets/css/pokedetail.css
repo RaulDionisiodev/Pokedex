@@ -23,13 +23,49 @@
 .container .title .types {
     margin: 0;
     list-style: none;
+    position: relative;
+    left: -2rem;
+    top: -1rem;
+    display: flex;
 }
 
 .container .title .types .type {
     color: #fff;
     padding: .25rem .5rem;
-    font-size: .625rem;
-    margin: .25rem 0;
+    margin: .25rem .25rem;
     border-radius: 1rem;
     filter: brightness(1.1);
+}
+
+.img_detail {
+    height: 200px;
+}
+
+.pokeinfos {
+    padding: .25rem .5rem;
+}
+
+.pokeinfos ol {
+    list-style-type: none;
+}
+
+.pokeinfos ol li {
+    margin: 0.25rem 0;
+}
+
+@media screen and (min-width:992px) {
+
+    .container {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        /*margin auto: o máximo possível para a direita e o máximo possível para a esquerda*/
+        border-radius: 1rem;
+    }
+
+    .pokeinfos {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+    }
 }
